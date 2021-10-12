@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(26, 27, 30);
+    color: white;
+    font-family: "Roboto Mono", monospace;
+}
+
+.row {
+    margin: 0;
+}
+
+html, body, .page-container {
+    height: 100%;
+}
+
+.page-container {
+    margin: 0;
+}
+
+.menu-title {
+    padding: 20px;
+    padding-left: 30px;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+    border-bottom: 1px solid gray;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.side-menu-container a {
+    display: block;
+    padding: 20px;
+    padding-left: 30px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed gray;
+}
+.side-menu-container a:hover {
+    background-color: #555;
+}
+
+.side-menu-container {
+    padding: 0;
+    background-color: black;
+}
+.right-container {
+    padding: 50px;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+.form-row-container {
+    padding-bottom: 20px;
+}
+
+.right-container input, select {
+    margin-right: 20px;
+    box-shadow: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 14px ;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+form {
+    padding-top: 20px;
+}
+
+.table-header {
+    border-bottom: 1px solid white;
+}
+
+
+th, td {
+    padding-right: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+i {
+    color: white;
+}
+
+.buttons-container, .icon-container {
+    display: inline;
+}
+
+.icon-container {
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.fa-edit {
+    color: #81C784;
+}
+
+.fa-trash {
+    color: #F44336;
+}
+
+tr {
+    border-bottom: 1px dashed gray;
+}
+
+.add-user {
+    margin-top: 20px;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+}
+
+tbody {
+    width: 100%;
+}
+
+.button-add {
+    padding: 15px;
+}
+
+.text2 {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+@media (max-width:768px) {
+    .side-menu-container {
+        display: none;
+        visibility: hidden;
+    }
+    .right-container {
+        width: 100%;
+    }
+}
+
