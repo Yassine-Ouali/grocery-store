@@ -1,6 +1,6 @@
 
 /* start of product details page css */
-.box-container .box .link:hover{
+.box-container .box .link::hover{
       text-decoration: none;
       color: inherit;
 }
