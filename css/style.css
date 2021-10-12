@@ -217,7 +217,11 @@ a { color: inherit; }
   }
 
 /* p3*/
-a .p3-link{
+.p3-link a{
+      text-color:black;
+      text-decoration: none;
+}
+.p3-link a: hover{
       text-color:black;
       text-decoration: none;
 }
