@@ -1,0 +1,212 @@
+
+/* start of product details page css */
+
+.quantity span {
+     padding: 0.7rem;
+     font-size: 1.7rem;
+     font-style: bold;
+}
+
+.quantity input{
+    border: 0.1rem solid rgba(0,0,0,.3);
+    font-size: 1rem;
+    font-weight: bolder;
+    color: black;
+    padding: 0.25rem;
+    background: rgba(0,0,0,.05);
+}
+
+.description button{
+    border: 0.1rem solid lightgray;
+    font-weight: bold;
+    padding: 0.25rem;
+    color: black;
+    width: 100%;
+}
+
+.gallery-wrap .img-big-wrap img {
+    height: 300px;
+    margin-top: 30%;
+    max-width: 300px;
+    display:inline-flex;
+   
+}
+
+
+.info{
+    color: white;
+}
+
+.menu{
+    float:left;
+  
+    background: gray;
+ 
+}
+.body{
+    float:left;
+    width:75%;
+}
+
+
+
+@media (min-width:600px){
+    
+
+.sidebar-container {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #1a1a1a;
+    color: #fff;
+  }
+  
+  .content-container {
+    padding-top: 20px;
+    
+  }
+  
+  .sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 20px;
+    background-color: #19b45ad3;
+  }
+  
+  .sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+  }
+  
+  .sidebar-navigation li a {
+    padding: 10px 15px 10px 30px;
+    display: block;
+    color: #fff;
+  }
+  
+  .sidebar-navigation li .fa {
+    margin-right: 10px;
+  }
+  
+  .sidebar-navigation li a:active,
+  .sidebar-navigation li a:hover,
+  .sidebar-navigation li a:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .sidebar-navigation li::before {
+    background-color: #19b45ad3;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+  
+  .sidebar-navigation li:hover::before {
+    width: 100%;
+  }
+  
+  .sidebar-navigation .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #151515;
+    padding: 10px 15px 10px 30px;
+  }
+  
+  .sidebar-navigation .header::before {
+    background-color: transparent;
+  }
+  
+  .content-container {
+    padding-left: 220px;
+  }
+}
+
+/* p2 */
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.box-container .box {
+      flex: 1 1 30rem;
+      text-align: center;
+      padding: 2rem;
+      border: .1rem solid rgba(0,0,0,.3);
+      border-color: rgba(0,0,0,.3);
+      border-radius: .5rem;
+      overflow: hidden;
+      position: relative;
+  }
+.box-container .box img {
+          height: 8rem;
+      }
+.header{
+   text-align:center;
+}
+.discount {
+  position: absolute;
+  top: .25rem;
+  left: .25rem;
+  background: rgba(0,255,0,.1);
+  padding: .5rem .5rem;
+  font-size: 1.25rem;
+}
+.btn-success{
+  position:relative;
+  top:1rem;
+}
+
+.fa-star{
+  color:gold;
+}
+
+/* START OF ICONS*/
+.box-container .box .icons {
+  position: absolute;
+  top: .5rem;
+  right: -6rem;
+}
+
+.box-container .box:hover .icons {
+  right: 1rem;
+}
+
+.box-container .box .icons a {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  background: rgba(0,0,0,.05);
+  border-radius: 50%;
+  margin-top: .7rem;
+}
+
+.box-container .box .icons a:hover {
+      background-color:green;
+      color: #fff;
+  }
+
+/*END OF ICONS*/
