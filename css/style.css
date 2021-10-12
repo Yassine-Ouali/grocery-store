@@ -1,11 +1,7 @@
 
 /* start of product details page css */
 
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
-      background-color:red;
- }
+
 
 .quantity span {
      padding: 0.7rem;
