@@ -1,6 +1,11 @@
 
 /* start of product details page css */
 
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
 .quantity span {
      padding: 0.7rem;
      font-size: 1.7rem;
