@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fresh Market - Nav Bar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="../css/nav-bar.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.css" />
+  </head>
+
+  <body>
+    <header>
+      <!--Top Header: Login, Sign, and Cart  -->
+      <div class="p-1" id="topHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mr-auto"></div>
+            <div class="col-lg-3 col-12 log-in">
+              <a class="p-1" href="log-in.html">
+                <i class="fas fa-sign-in-alt"></i> Log In
+              </a>
+              <a class="p-1"> | </a>
+              <a class="p-1" href="sign-up.html">Sign Up </a>
+              <a class="p-2 ml-3 cart-sm" href="cart.html">
+                <i class="fas fa-shopping-cart"></i> Cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Bottom Header: Logo, Menu, Nav Bar Toggler -->
+      <div id="bottomHeader">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <!--Brand Logo-->
+            <a class="navbar-brand" href="">
+              <img src="../imgs/logo.png" width="100px" alt="" />
+            </a>
+            <button
+              data-toggle="collapse"
+              data-target="#navbarToggler"
+              type="button"
+              class="navbar-toggler"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    href="#"
+                    >Aisles</a
+                  >
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page2_Fruits_Veggies.html"
+                      >Fruits and Vegetables</a
+                    >
+                    <a class="dropdown-item" href="#">Dairy products</a>
+                    <a class="dropdown-item" href="page2_1_Meat.html"
+                      >Meat & Poultry</a
+                    >
+                    <a class="dropdown-item" href="page2_BreadAndBakery.html"
+                      >Bread & Bakery products</a
+                    >
+                    <a class="dropdown-item" href="page2_FishAndSeafood.html"
+                      >Fish & Seafood</a
+                    >
+                    <a class="dropdown-item" href="page2_Frozen.html"
+                      >Frozen Food</a
+                    >
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="backstore.html">Backstore</a>
+                </li>
+              </ul>
+
+              <a
+                class="p-2 ml-3 cart-lg"
+                style="color: black; text-decoration: none"
+                href="cart.html"
+              >
+                <i class="fas fa-shopping-cart"></i> Cart
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- JavaScript, It allows for dropdown menu -->
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
