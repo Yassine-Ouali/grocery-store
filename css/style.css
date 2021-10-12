@@ -217,8 +217,9 @@ a { color: inherit; }
   }
 
 /* p3*/
-.p3-link{
+a .p3-link{
       text-color:black;
       text-decoration: none;
 }
+
 /*END OF ICONS*/
