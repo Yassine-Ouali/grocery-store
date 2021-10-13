@@ -144,12 +144,12 @@
 
         .product > img {
             height: 150px;
-            width: 100px;
+            width: 80px;
         }
 
     .product-name, .product-price, .product-offer {
         margin-bottom: 1px;
-        font-size: 20px;
+        font-size: 17px;
     }
 }
 
