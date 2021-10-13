@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="assets/css/inventoryeditstyles.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/background-page.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web\fontawesome-free-5.15.4-web\css\all.css">
 </head>
 
-<body style="background: var(--bs-white);border-color: var(--bs-light);">
+<body style="background: rgb(0,0,0);border-color: var(--bs-light);color: rgb(255,255,255);">
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="color: var(--bs-white);background: rgb(0,0,0);">
         <div class="container"><a class="navbar-brand" href="#" style="color: rgb(255,255,255);">THE FRESH MARKET</a><a class="navbar-brand" href="#" style="color: var(--bs-success);">Backstore</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: rgb(255,255,255);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon">V</span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -25,14 +30,14 @@
         </div>
     </nav>
     <div style="height: 155px;margin: 0;">
-        <div style="margin: 0px;height: 100%;color: var(--bs-dark);background: var(--bs-white);/*border-radius: 4px;*/">
+        <div style="margin: 0px;height: 100%;color: #ffffff;background: #000000;/*border-radius: 4px;*/">
             <h1 style="text-align: left;margin-left: 15px;">Inventory List<br><br></h1><a class="btn btn-primary" role="button" style="/*position: absolute;*//*left: 15px;*//*-ms-transform: translateX(-50%);*/transform: translateX(15px);/*font-weight: bold;*/" href="P8.html">&nbsp; ADD&nbsp;&nbsp;</a>
         </div>
     </div>
-    <div style="height: 400;background: var(--bs-white);margin: 0px;display: block;border-radius: 4px;margin-left: 15px;">
-        <div class="table-responsive" style="/*border-radius: 4px;*/margin-left: 15;">
+    <div style="height: 400;background: #000000;margin: 0px;display: block;border-radius: 4px;margin-left: 15px;color: #ffffff;">
+        <div class="table-responsive" style="/*border-radius: 4px;*/margin-left: 15;color: rgb(255,255,255);">
             <table class="table" style="position: relative;height: 200px;overflow: scroll;">
-                <thead style="background: rgb(247, 247, 247);">
+                <thead style="background: var(--bs-gray-dark);">
                     <tr>
                         <th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Serial Number</th>
                         <th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Name</th>
@@ -42,7 +47,7 @@
                         <th style="width: 168px;color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="color: rgb(255,255,255);">
                     <tr>
                         <td>FRAS0001</td>
                         <td>Natrel Milk 2%</td>
