@@ -143,8 +143,8 @@
     }
 
         .product > img {
-            height: 150px;
-            width: 200px;
+            height: 50px;
+            width: 50px;
         }
 
     .product-name, .product-price, .product-offer {
