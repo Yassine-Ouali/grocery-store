@@ -163,6 +163,10 @@
         margin-left: 0px;
         margin-bottom: 20px;
     }
+     .product > img {
+            height: 200px;
+            width: 200px;
+        }
 }
 
 @media screen and (max-width: 1220px) {
