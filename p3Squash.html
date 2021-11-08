@@ -31,7 +31,7 @@
     
 
   </head>
-  <body>
+  <body onload="calc()">
 	  
 <div id ="grocery-header"></div>
 <div class="container">
@@ -56,7 +56,7 @@
 
 <p class="price-detail-wrap"> 
 	<span class="price h3 text-success"> 
-		<span class="currency">CAD $</span><span class="num">30</span>
+		<span class="currency">CAD $</span><span id="price" class="num">30</span>
 	</span> 
 	<span>/per kg</span> 
 </p> <!-- price-detail-wrap .// -->
@@ -74,19 +74,24 @@
 	<dd>500g</dd>
 </dl>  <!-- item-property .// -->
 <div class="description">
-		<button onclick="myFunction()">Description</button>
-	<div id ="myDIV">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reprehenderit libero non, quam pariatur earum debitis nisi eveniet rerum quaerat id voluptatum nostrum deleniti odio cum aut! Delectus, rerum perspiciatis.
-	</div>
-  
+	<button onclick="myFunction()">Description</button>
+	  <p id="demo"> </p>
+	  <script>
+		function myFunction() {
+		  document.getElementById("demo").innerHTML = "great cut of fresh Squash";
+		}
+  </script>
   
   
   </div>
 
 <hr>
 <div class="quantity">
+	<span><b>Total :</b><span id="totall">3</span></span>
+</div>
+<div class="quantity">
 	<span><b>Quantity</b> : </span>
-	<input type="number" min="1" max="1000" value="1">
+	<input type="number" id="quantity_squash" oninput="calc()"  min="1" max="1000" onchange="persistValue(this)">
 	<span> kg </span>
 </div>
 		
@@ -107,7 +112,38 @@
 	
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/popper.min.js"></script>
-<script src="/js/p3script.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script text="text/javascript">
+	document.getElementById("quantity_squash").value = getPersistedValue("quantity_squash");
+	
+	function getPersistedValue  (v){
+	  if (!localStorage.getItem(v)) {
+		  return "1";
+	  }
+	  return localStorage.getItem(v);
+	}
+	
+	function persistValue(e){
+	  var val = e.value;
+	  var id = e.id;
+	  localStorage.setItem(id, val);
+	}
+	</script>
+	<script type="text/javascript">
+	
+	function calc() {
+	  var price = parseFloat(document.getElementById("price").innerHTML);
+	  var quantity = document.getElementById("quantity_squash").value;
+	  var total = price * quantity;
+	
+	  if (!isNaN(total))
+	  document.getElementById("totall").innerHTML ="CAD $"+total;
+	  
+	
+	}
+	// set the value to this input
+	</script>
+
 
 <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
