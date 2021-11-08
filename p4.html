@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -10,26 +10,47 @@
     <link rel="stylesheet" href="../css/nav-bar.css" />
 
     <link rel="stylesheet" type="text/css" href="./css/p4.css">
-    
-    
 
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- Bootstrap core CSS -->
     <!-- Custom styles for this template -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      $(function () {
-        $("#grocery-header").load("common/nav-bar.html");
-        $("#grocery-footer").load("common/footer.html");
-      });
+        $(function () {
+            $("#grocery-header").load("common/nav-bar.html");
+            $("#grocery-footer").load("common/footer.html");
+        });
+    </script>
+    <script type="text/javascript">
+        function calc() {
+            var price = parseFloat(document.getElementById("product-offer-perKg").innerHTML);
+            var quantity = document.getElementById("quantity").value;
+            var total = price * quantity;
+            var price2 = parseFloat(document.getElementById("product-offer-perKg2").innerHTML);
+            var quantity2 = document.getElementById("quantity2").value;
+            var total2 = price2 * quantity2;
+            if (!isNaN(total))
+                document.getElementById("subtotal").innerHTML = total + total2;
+
+        }
+/* function calc2(){
+                              var price2 = parseFloat(document.getElementById("product-offer-perKg2").innerHTML);
+                           var quantity2 = document.getElementById("quantity2").value;
+                           var total2 = price2 * quantity2;
+                           if (!isNaN(total2))
+                             document.getElementById("subtotal").innerHTML = total2;
+                         }*/
     </script>
 
 </head>
 
 <body>
-<div id ="grocery-header"></div>
+    <div id="grocery-header"></div>
 
 
     <div class="container">
@@ -42,21 +63,21 @@
 
                 <div class="product">
 
-                    <img src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
+                    <img
+                        src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
 
                     <div class="product-info">
 
                         <h3 class="product-name">Ribeye</h3>
 
                         <h4 class="product-price">190G AVG.</h4>
-                        <h4 class="product-offer">30$/Kg</h4>
+                        <h4> $ <span id="product-offer-perKg">30</span> /Kg</h4>
                         <h4 class="product-offer">15$/LB</h4>
 
-                        <p class="product-quantity">Quantity: <input type="number" min="1" max="100" value="" />
-                            
+                        <p class="product-quantity">Quantity:
+                            <input id="quantity" type="number" min="1" max="100" value="" onclick="calc()" onchange="onChangeQuantity('quantity', this)" />
                             <i class="fas fa-trash"></i>
-
-<!--                         <p class="product-remove">
+                            <!--                         <p class="product-remove">
 
                             <i class="fa fa-trash" aria-hidden="true"></i>
 
@@ -65,35 +86,37 @@
                         </p> -->
 
                     </div>
-    
+
 
                 </div>
 
                 <div class="product">
 
-                    <img src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
+                    <img
+                        src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
 
                     <div class="product-info">
 
                         <h3 class="product-name">Ribeye</h3>
 
                         <h4 class="product-price">190G AVG.</h4>
-                        <h4 class="product-offer">30$/Kg</h4>
+                        <h4> $ <span id="product-offer-perKg2">30</span> /Kg</h4>
                         <h4 class="product-offer">15$/LB</h4>
 
-                        <p class="product-quantity">Quantity: <input type="number" min="1" max="100" value="" />
-                            
+                        <p id="product-quantity">Quantity:
+                            <input id="quantity2" type="number" min="1" max="100" onchange="onChangeQuantity('quantity2', this)"  />
+
                             <i class="fas fa-trash"></i>
 
-<!--                         <p class="product-remove">
+                            <!--                         <p class="product-remove">
 
                             <i class="fa fa-trash" aria-hidden="true"></i>
 
                             <span class="remove">Remove</span>
 
                         </p> -->
-                            
-                            
+
+
 
                     </div>
 
@@ -115,7 +138,7 @@
 
                     <span>Amount before taxes:</span>
 
-                    <span>30$</span>
+                    <span id="sum-before-taxes">30</span>
 
                 </p>
 
@@ -123,21 +146,21 @@
 
                     <span>GST(5%):</span>
 
-                    <span>1$</span>
+                    <span id="sum-gst">1</span>
 
                 </p>
                 <p>
 
                     <span>QST(10%):</span>
 
-                    <span>1$</span>
+                    <span id="sum-qst">1</span>
 
                 </p>
                 <p>
 
                     <span>The total amount after taxes:</span>
 
-                    <span>28$</span>
+                    <span id="sum-after-taxes">32</span>
 
                 </p>
 
@@ -150,26 +173,28 @@
             <div class="pt-4">
                 <h5 class="mb-4">We accept</h5>
                 <img class="mr-2" width="45px"
-                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                     alt="Visa">
+                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                    alt="Visa">
                 <img class="mr-2" width="45px"
-                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                     alt="American Express">
+                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                    alt="American Express">
                 <img class="mr-2" width="45px"
-                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                     alt="Mastercard">
+                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                    alt="Mastercard">
                 <img class="mr-2" width="45px"
-                     src="https://mdbootstrap.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-                     alt="PayPal acceptance mark">
+                    src="https://mdbootstrap.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+                    alt="PayPal acceptance mark">
             </div>
         </div>
 
     </div>
-    <div id ="grocery-footer"></div>
-   
-       <script src="/js/bootstrap.min.js"></script>
+    <div id="grocery-footer"></div>
+
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/p4script.js"></script>
+
 
 
 
