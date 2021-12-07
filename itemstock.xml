@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<ProductName>Egg</ProductName>
+		<ProductBrand>Mighty Cow</ProductName>
+		<ProductCategory>Dairy</ProductName>
+		<ProductUnity>Count</ProductName>
+		<ProductQuantityPerUnit>12</ProductName>
+		<ProductUnitPrice>6</ProductName>
+		<ProductAvailableStock>30</ProductName>
+		<ProductMaximumStock>456</ProductName>
+		<ProductDescription>This is a really cool egg from a really cool cow</ProductName>
+	</items>
+	<item>
+		<ProductName>Milk</ProductName>
+		<ProductBrand>Mighty Cow</ProductName>
+		<ProductCategory>Dairy</ProductName>
+		<ProductUnity>L</ProductName>
+		<ProductQuantityPerUnit>2</ProductName>
+		<ProductUnitPrice>10</ProductName>
+		<ProductAvailableStock>50</ProductName>
+		<ProductMaximumStock>400</ProductName>
+		<ProductDescription>This is really tasty milk from a really cool cow</ProductName>
+	</items>
+</items>
