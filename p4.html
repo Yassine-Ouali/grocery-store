@@ -3,14 +3,12 @@
 <html>
 
 <head>
-
     <title>Shopping Cart</title>
 
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/nav-bar.css" />
 
     <link rel="stylesheet" type="text/css" href="./css/p4.css">
-
 
 
     <link rel="stylesheet" type="text/css"
@@ -26,146 +24,40 @@
             $("#grocery-footer").load("common/footer.html");
         });
     </script>
-    <script type="text/javascript">
-        function calc() {
-            var price = parseFloat(document.getElementById("product-offer-perKg").innerHTML);
-            var quantity = document.getElementById("quantity").value;
-            var total = price * quantity;
-            var price2 = parseFloat(document.getElementById("product-offer-perKg2").innerHTML);
-            var quantity2 = document.getElementById("quantity2").value;
-            var total2 = price2 * quantity2;
-            if (!isNaN(total))
-                document.getElementById("subtotal").innerHTML = total + total2;
-
-        }
-/* function calc2(){
-                              var price2 = parseFloat(document.getElementById("product-offer-perKg2").innerHTML);
-                           var quantity2 = document.getElementById("quantity2").value;
-                           var total2 = price2 * quantity2;
-                           if (!isNaN(total2))
-                             document.getElementById("subtotal").innerHTML = total2;
-                         }*/
-    </script>
-
 </head>
 
 <body>
     <div id="grocery-header"></div>
-
-
     <div class="container">
-
         <h1>Shopping Cart</h1>
-
         <div class="cart">
-
-            <div class="products">
-
-                <div class="product">
-
-                    <img
-                        src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
-
-                    <div class="product-info">
-
-                        <h3 class="product-name">Ribeye</h3>
-
-                        <h4 class="product-price">190G AVG.</h4>
-                        <h4> $ <span id="product-offer-perKg">30</span> /Kg</h4>
-                        <h4 class="product-offer">15$/LB</h4>
-
-                        <p class="product-quantity">Quantity:
-                            <input id="quantity" type="number" min="1" max="100" value="" onclick="calc()" onchange="onChangeQuantity('quantity', this)" />
-                            <i class="fas fa-trash"></i>
-                            <!--                         <p class="product-remove">
-
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-
-                            <span class="remove">Remove</span>
-
-                        </p> -->
-
-                    </div>
-
-
-                </div>
-
-                <div class="product">
-
-                    <img
-                        src="https://previews.123rf.com/images/milanchikov/milanchikov1911/milanchikov191100029/133560724-a-rib-eye-steak-of-marbled-grain-fed-beef-lies-on-a-white-background-isolated-.jpg">
-
-                    <div class="product-info">
-
-                        <h3 class="product-name">Ribeye</h3>
-
-                        <h4 class="product-price">190G AVG.</h4>
-                        <h4> $ <span id="product-offer-perKg2">30</span> /Kg</h4>
-                        <h4 class="product-offer">15$/LB</h4>
-
-                        <p id="product-quantity">Quantity:
-                            <input id="quantity2" type="number" min="1" max="100" onchange="onChangeQuantity('quantity2', this)"  />
-
-                            <i class="fas fa-trash"></i>
-
-                            <!--                         <p class="product-remove">
-
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-
-                            <span class="remove">Remove</span>
-
-                        </p> -->
-
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
+            <div class="products"></div>
             <div class="cart-total">
-
                 <p>
-
                     <span>The total amount of</span>
-
-
-
                 </p>
 
                 <p>
-
                     <span>Amount before taxes:</span>
-
-                    <span id="sum-before-taxes">30</span>
-
+                    <span id="sum-before-taxes-total">30</span>
                 </p>
 
                 <p>
-
                     <span>GST(5%):</span>
-
                     <span id="sum-gst">1.5</span>
-
                 </p>
-                <p>
 
+                <p>
                     <span>QST(10%):</span>
-
                     <span id="sum-qst">3</span>
-
                 </p>
+
                 <p>
-
                     <span>The total amount after taxes:</span>
-
                     <span id="sum-after-taxes">34.5</span>
-
                 </p>
 
                 <a href="#">Proceed to Checkout</a>
-
             </div>
 
         </div>
@@ -186,19 +78,18 @@
                     alt="PayPal acceptance mark">
             </div>
         </div>
-
     </div>
     <div id="grocery-footer"></div>
+    <script src="/js/cart.js"></script>
 
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/p4script.js"></script>
-
-
-
-
+    <script>
+        // calc();
+        refreshPrices();
+    </script>
 </body>
-
 
 </html>
