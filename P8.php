@@ -28,7 +28,7 @@
             
             foreach ($itemstock_doc->childNodes as $node)
             {
-                if ($ProductNmber == ($node->GetElementsByTagname("ProductName"))->nodeValue)
+                if ($ProductNmber == ($node->GetElementsByTagname("ProductNumber"))->nodeValue)
                 {
                     
                     $ProductName= ($node->GetElementsByTagname("ProductName"))->nodeValue;
