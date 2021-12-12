@@ -37,37 +37,40 @@
     <div style="height: 400;background: #000000;margin: 0px;display: block;border-radius: 4px;margin-left: 15px;color: #ffffff;">
         <div class="table-responsive" style="/*border-radius: 4px;*/margin-left: 15;color: rgb(255,255,255);">
                     <?php
-                        echo "<table class="table" style="position: relative;height: 200px;overflow: scroll;">\n"
-                        echo "<thead style="background: var(--bs-gray-dark);">
-                                        echo "<tr>\n"
-                                        echo "<th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Serial Number<\th>\n"
-                                        echo "<th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Name<\th>\n"
-                                        echo "<th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Category<\th>\n"
-                                        echo "<th style="color: rgb(13, 110, 253);border-color: var(--bs-gray);width: 131.4px;">Price(CAD)<\th>\n"
-                                        echo "<th style="color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Stock<\th>\n"
-                                        echo "<th style="width: 168px;color: rgb(13, 110, 253);border-color: var(--bs-secondary);">Action<\th>\n"
-                                    echo "<\tr>\n"
-                                echo "<\thead>\n"
-                                echo "<tbody style="color: rgb(255,255,255);">\n"
+                        echo "<table class=\"table\" style=\"position: relative;height: 200px;overflow: scroll;\">\n";
+                        echo "<thead style=\"background: var(--bs-gray-dark);\">\n";
+                                        echo "<tr>\n";
+                                        echo "<th style=\"color: rgb(13, 110, 253);border-color: var(--bs-secondary);\">Serial Number</th>\n";
+                                        echo "<th style=\"color: rgb(13, 110, 253);border-color: var(--bs-secondary);\">Name</th>\n";
+                                        echo "<th style=\"color: rgb(13, 110, 253);border-color: var(--bs-secondary);\">Category</th>\n";
+                                        echo "<th style=\"color: rgb(13, 110, 253);border-color: var(--bs-gray);width: 131.4px;\">Price(CAD)</th>\n";
+                                        echo "<th style=\"color: rgb(13, 110, 253);border-color: var(--bs-secondary);\">Stock</th>\n";
+                                        echo "<th style=\"width: 168px;color: rgb(13, 110, 253);border-color: var(--bs-secondary);\">Action</th>\n";
+                                    echo "</tr>\n";
+                                echo "</thead>\n";
+                                echo "<tbody style=\"color: rgb(255,255,255);\">\n";
 
+                        $itemstock_doc = new DOMDocument();
+                        $itemstock_doc->preserveWhiteSpace = false;
+                        $itemstock_doc->load("itemstock.xml");
                         $items = $itemstock_doc->documentElement;
 
-                        foreach ($itemstock_doc->childNodes as $node)
+                        foreach (($itemstock_doc->childNodes)[0]->childNodes as $node)
                             {
-                                $ProNumumber = ($node->GetElementsByTagname("ProductNumber"))->nodeValue
-                                $ProName= ($node->GetElementsByTagname("ProductName"))->nodeValue;
-                                $ProCategory= ($node->GetElementsByTagname("ProductCategory"))->nodeValue;
-                                $ProUnitPrice = ($node->GetElementsByTagname("UnitPrice"))->nodeValue;
-                                $ProAvailableStock= ($node->GetElementsByTagname("ProductAvailableStock"))->nodeValue;
+                                $ProNumber = ($node->GetElementsByTagname("ProductNumber"))[0]->nodeValue;
+                                $ProName= ($node->GetElementsByTagname("ProductName"))[0]->nodeValue;
+                                $ProCategory= ($node->GetElementsByTagname("ProductCategory"))[0]->nodeValue;
+                                $ProUnitPrice = ($node->GetElementsByTagname("ProductUnitPrice"))[0]->nodeValue;
+                                $ProAvailableStock= ($node->GetElementsByTagname("ProductAvailableStock"))[0]->nodeValue;
 
-                                echo "<tr>\n"
-                                echo "	<td>{$ProNumber}<br></td>\n"
-                                echo "	<td>{$ProName}</td>\n"
-                                echo "	<td>{$ProCategory}</td>\n"
-                                echo "	<td>{$ProUnitPrice}</td>\n"
-                                echo "	<td>{$ProAvailableStock}</td>\n"
-                                echo "	<td><a class="btn btn-primary" role="button" style="background: var(--bs-success);border-width: 1px;border-color: var(--bs-green);font-weight: bold;margin: 0px 2px;" href="P8.php?product={$ProNumber}">EDIT</a><button class="btn btn-primary" type="button" style="background: var(--bs-red);font-weight: bold;margin: 0px 2px;border-width: 1px;border-color: var(--bs-danger);">DELETE</button></td>\n"
-                                echo "</tr>\n"
+                                echo "<tr>\n";
+                                echo "	<td>{$ProNumber}<br></td>\n";
+                                echo "	<td>{$ProName}</td>\n";
+                                echo "	<td>{$ProCategory}</td>\n";
+                                echo "	<td>{$ProUnitPrice}</td>\n";
+                                echo "	<td>{$ProAvailableStock}</td>\n";
+                                echo "	<td><a class=\"btn btn-primary\" role=\"button\" style=\"background: var(--bs-success);border-width: 1px;border-color: var(--bs-green);font-weight: bold;margin: 0px 2px;\" href=\"P8.php?product={$ProNumber}\">EDIT</a><button class=\"btn btn-primary\" type=\"button\" style=\"background: var(--bs-red);font-weight: bold;margin: 0px 2px;border-width: 1px;border-color: var(--bs-danger);\">DELETE</button></td>\n";
+                                echo "</tr>\n";
                             }
                     ?>
                 </tbody>    
