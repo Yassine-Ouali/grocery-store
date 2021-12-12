@@ -49,7 +49,7 @@
         <div class="container"><a class="navbar-brand" href="#" style="color: rgb(255,255,255);">THE FRESH MARKET</a><a class="navbar-brand" href="#" style="color: var(--bs-success);">Backstore</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: rgb(255,255,255);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon">V</span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="P7.html" style="color: rgb(255,255,255);">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="P7.php" style="color: rgb(255,255,255);">Inventory</a></li>
                     <li class="nav-item"><a class="nav-link" href="P9.html" style="color: rgb(255,255,255);">Users</a></li>
                     <li class="nav-item"><a class="nav-link" href="P11.html" style="color: rgb(255,255,255);">Orders</a></li>
                 </ul><span class="navbar-text actions"> </span>
@@ -61,7 +61,7 @@
             <div style="margin: 0px;height: 100px;color: var(--bs-dark);border-radius: 4px;">
                 <h1 style="text-align: center;color: var(--bs-white);">Create/Edit Item</h1>
                 <div class="btn-toolbar" style="/*position: absolute;*//*left: 50%;*//*-ms-transform: translateX(-50%);*/transform: translateX(42%);">
-                    <div class="btn-group" role="group"><input type=submit class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" name="add" value="SAVE">SAVE</input><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.html">CANCEL</a></div>
+                    <div class="btn-group" role="group"><input type=submit class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" name="add" value="SAVE">SAVE</input><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.php">CANCEL</a></div>
                 </div>
             </div>
         </div>

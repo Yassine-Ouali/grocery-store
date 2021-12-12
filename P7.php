@@ -22,7 +22,7 @@
         <div class="container"><a class="navbar-brand" href="#" style="color: rgb(255,255,255);">THE FRESH MARKET</a><a class="navbar-brand" href="#" style="color: var(--bs-success);">Backstore</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: rgb(255,255,255);"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon">V</span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="P7.html" style="color: rgb(255,255,255);" data-bs-target="P7.html">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="P7.php" style="color: rgb(255,255,255);" data-bs-target="P7.php">Inventory</a></li>
                     <li class="nav-item"><a class="nav-link" href="P9.html" style="color: rgb(255,255,255);" data-bs-target="P9.html">Users</a></li>
                     <li class="nav-item"><a class="nav-link" href="P11.html" style="color: rgb(255,255,255);">Orders</a></li>
                 </ul><span class="navbar-text actions"> </span>
