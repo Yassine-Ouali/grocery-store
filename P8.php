@@ -56,12 +56,12 @@
             </div>
         </div>
     </nav>
-    <form action="addProduct.php" method="[post" class="needs-validation">
+    <form action="editProduct.php?product=<?php echo $ProductNumber; ?>" method="post" class="needs-validation">
         <div style="height: 150px;margin: 18px;">
             <div style="margin: 0px;height: 100px;color: var(--bs-dark);border-radius: 4px;">
                 <h1 style="text-align: center;color: var(--bs-white);">Create/Edit Item</h1>
                 <div class="btn-toolbar" style="/*position: absolute;*//*left: 50%;*//*-ms-transform: translateX(-50%);*/transform: translateX(42%);">
-                    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" href="P7.html">SAVE</a><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.html">CANCEL</a></div>
+                    <div class="btn-group" role="group"><input type=submit class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" name="add" value="SAVE">SAVE</input><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.html">CANCEL</a></div>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
                                                     <div class="mb-3"><label class="form-label" for="productname"><strong>Product Name</strong></label><input class="form-control" type="text" id="username-1" value="<?php echo $ProductName; ?>" name="name" style="background: rgb(0,0,0);border-color: rgb(0,0,0);border-top-color: rgb(33,;border-right-color: 37,;border-bottom-color: 41);border-left-color: 37,;"></div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="productbrand"><strong>Product Brand</strong></label><input class="form-control" type="email" id="email-1" value="<?php echo $ProductBrand; ?>" name="brand" style="border-color: rgb(0,0,0);background: rgb(0,0,0);"></div>
+                                                    <div class="mb-3"><label class="form-label" for="productbrand"><strong>Product Brand</strong></label><input class="form-control" type="text" id="email-1" value="<?php echo $ProductBrand; ?>" name="brand" style="border-color: rgb(0,0,0);background: rgb(0,0,0);"></div>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -151,14 +151,12 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="productcategory"><strong>Product Category</strong></label><select class="form-select" name="productcategory" value="<?php echo $ProductCategory; ?>" style="background: rgb(0,0,0);border-color: rgb(0,0,0);">
-                                                            <optgroup label="Select one">
-                                                                <option value="1" selected="">Dairy</option>
-                                                                <option value="2">Fruits</option>
-                                                                <option value="3">Meat</option>
-                                                                <option value="4">Seafood products</option>
-                                                                <option value="3">Vegetables</option>
-                                                            </optgroup>
+                                                    <div class="mb-3"><label class="form-label" for="productcategory"><strong>Product Category</strong></label><select class="form-select" name="product_category" value="<?php echo $ProductCategory; ?>" style="background: rgb(0,0,0);border-color: rgb(0,0,0);">
+                                                                <option value="Dairy">Dairy</option>
+                                                                <option value="Fruits">Fruits</option>
+                                                                <option value="Meat">Meat</option>
+                                                                <option value="Seafood products">Seafood products</option>
+                                                                <option value="Vegetables">Vegetables</option>
                                                         </select></div>
                                                 </div>
                                                 <div class="col"></div>

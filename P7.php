@@ -69,7 +69,7 @@
                                 echo "	<td>{$ProCategory}</td>\n";
                                 echo "	<td>{$ProUnitPrice}</td>\n";
                                 echo "	<td>{$ProAvailableStock}</td>\n";
-                                echo "	<td><a class=\"btn btn-primary\" role=\"button\" style=\"background: var(--bs-success);border-width: 1px;border-color: var(--bs-green);font-weight: bold;margin: 0px 2px;\" href=\"P8.php?product={$ProNumber}\">EDIT</a><button class=\"btn btn-primary\" type=\"button\" style=\"background: var(--bs-red);font-weight: bold;margin: 0px 2px;border-width: 1px;border-color: var(--bs-danger);\">DELETE</button></td>\n";
+                                echo "	<td><a class=\"btn btn-primary\" role=\"button\" style=\"background: var(--bs-success);border-width: 1px;border-color: var(--bs-green);font-weight: bold;margin: 0px 2px;\" href=\"P8.php?product={$ProNumber}\">EDIT</a><a class=\"btn btn-primary\" role=\"button\" style=\"background: var(--bs-red);border-width: 1px;border-color: var(--bs-red);font-weight: bold;margin: 0px 2px;\" href=\"deleteProduct.php?product={$ProNumber}\">DELETE</a></td>\n";
                                 echo "</tr>\n";
                             }
                     ?>
