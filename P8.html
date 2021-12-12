@@ -29,12 +29,12 @@
             </div>
         </div>
     </nav>
-    <form action="P8.php" method="[pst" class="needs-validation">
+    <form action="addProduct.php" method="post" class="needs-validation">
         <div style="height: 150px;margin: 18px;">
             <div style="margin: 0px;height: 100px;color: var(--bs-dark);border-radius: 4px;">
                 <h1 style="text-align: center;color: var(--bs-white);">Create/Edit Item</h1>
                 <div class="btn-toolbar" style="/*position: absolute;*//*left: 50%;*//*-ms-transform: translateX(-50%);*/transform: translateX(42%);">
-                    <div class="btn-group" role="group"><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" href="P7.html">SAVE</a><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.html">CANCEL</a></div>
+                    <div class="btn-group" role="group"><input type=submit class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-success);border-color: var(--bs-success);font-weight: bold;" name="add" value="SAVE" href="P7.html">SAVE</input><a class="btn btn-primary" role="button" style="margin: 2px;background: var(--bs-red);border-color: var(--bs-red);font-weight: bold;" href="P7.php">CANCEL</a></div>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                                                     <div class="mb-3"><label class="form-label" for="productname"><strong>Product Name</strong></label><input class="form-control" type="text" id="username-1" placeholder="2% Milk" name="name" style="background: rgb(0,0,0);border-color: rgb(0,0,0);border-top-color: rgb(33,;border-right-color: 37,;border-bottom-color: 41);border-left-color: 37,;"></div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="productbrand"><strong>Product Brand</strong></label><input class="form-control" type="email" id="email-1" placeholder="Natrel" name="brand" style="border-color: rgb(0,0,0);background: rgb(0,0,0);"></div>
+                                                    <div class="mb-3"><label class="form-label" for="productbrand"><strong>Product Brand</strong></label><input class="form-control" type="text" id="email-1" placeholder="Natrel" name="brand" style="border-color: rgb(0,0,0);background: rgb(0,0,0);"></div>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -156,7 +156,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="productavailablestock" for="city"><strong>Available Stock</strong></label><input class="form-control" type="text" id="city-2" placeholder="30" name="city" style="background: rgb(0,0,0);border-color: rgb(0,0,0);"></div>
+                                                    <div class="mb-3"><label class="productavailablestock" for="city"><strong>Available Stock</strong></label><input class="form-control" type="text" id="city-2" placeholder="30" name="productavailablestock" style="background: rgb(0,0,0);border-color: rgb(0,0,0);"></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="mb-3"><label class="productmaximumstock" for="city"><strong>Maximum Stock</strong></label><input class="form-control" type="text" id="pmaxstoc-1" placeholder="150" name="maxstock" style="background: rgb(0,0,0);border-color: rgb(0,0,0);"></div>
@@ -189,6 +189,8 @@
             </div>
         </div>
     </form>
+
+    
     
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

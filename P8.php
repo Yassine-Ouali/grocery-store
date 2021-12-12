@@ -19,6 +19,7 @@
 
 <body style="background: var(--bs-dark);">
     <?php
+        $Product=$_GET['product'];
         $ProductNumber= $_GET['product'];
         $itemstock_doc = new DOMDocument();
         $itemstock_doc->preserveWhiteSpace = false;
@@ -26,19 +27,19 @@
 
         $items = $itemstock_doc->documentElement;
             
-            foreach ($itemstock_doc->childNodes as $node)
+            foreach (($itemstock_doc->childNodes)[0]->childNodes as $node)
             {
-                if ($ProductNmber == ($node->GetElementsByTagname("ProductNumber"))->nodeValue)
+                if ($ProductNumber == ($node->GetElementsByTagname("ProductNumber"))[0]->nodeValue)
                 {
                     
-                    $ProductName= ($node->GetElementsByTagname("ProductName"))->nodeValue;
-                    $ProductBrand= ($node->GetElementsByTagname("ProductBrand"))->nodeValue;
-                    $ProductCategory= ($node->GetElementsByTagname("ProductCategory"))->nodeValue;
-                    $ProductQuantityPerUnit= ($node->GetElementsByTagname("ProductQuantityPerUnit"))->nodeValue;
-                    $ProductUnitPrice = ($node->GetElementsByTagname("UnitPrice"))->nodeValue;
-                    $ProductAvailableStock= ($node->GetElementsByTagname("ProductAvailableStock"))->nodeValue;
-                    $ProductMaximumStock= ($node->GetElementsByTagname("ProductMaximumStock"))->nodeValue;
-                    $ProductDescription = ($node->GetElementsByTagname("ProductDescription"))->nodeValue;
+                    $ProductName= ($node->GetElementsByTagname("ProductName"))[0]->nodeValue;
+                    $ProductBrand= ($node->GetElementsByTagname("ProductBrand"))[0]->nodeValue;
+                    $ProductCategory= ($node->GetElementsByTagname("ProductCategory"))[0]->nodeValue;
+                    $ProductQuantityPerUnit= ($node->GetElementsByTagname("ProductQuantityPerUnit"))[0]->nodeValue;
+                    $ProductUnitPrice = ($node->GetElementsByTagname("ProductUnitPrice"))[0]->nodeValue;
+                    $ProductAvailableStock= ($node->GetElementsByTagname("ProductAvailableStock"))[0]->nodeValue;
+                    $ProductMaximumStock= ($node->GetElementsByTagname("ProductMaximumStock"))[0]->nodeValue;
+                    $ProductDescription = ($node->GetElementsByTagname("ProductDescription"))[0]->nodeValue;
                 }
                 
             }
